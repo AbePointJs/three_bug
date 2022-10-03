@@ -1,0 +1,29 @@
+body {
+	background: grey;
+	background-size: 200% 200%;
+	animation: gradient 2s ease infinite;
+	height: 100vh;
+}
+
+.App {
+	font-family: sans-serif;
+	text-align: center;
+	height: 1000px;
+}
+
+ul li a {
+	text-decoration: none;
+}
+
+ul li a.active {
+	text-decoration: underline;
+}
+
+.canvas {
+	pointer-events: none !important;
+	position: fixed !important;
+	top: 0px;
+	left: 0px;
+	width: 100% !important;
+	height: 100% !important;
+}
