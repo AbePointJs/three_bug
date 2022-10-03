@@ -2,6 +2,17 @@ import { useState, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
+function useHover() {
+	const [hovered, hover] = useState(false);
+	return [
+		hovered,
+		{
+			onPointerOver: (e) => (e.stopPropagation(), hover(true)),
+			onPointerOut: () => hover(false),
+		},
+	];
+}
+
 export function Soda(props) {
 	const ref = useRef();
 	const [hovered, spread] = useHover();
@@ -26,17 +37,6 @@ export function Soda(props) {
 			/>
 		</group>
 	);
-}
-
-function useHover() {
-	const [hovered, hover] = useState(false);
-	return [
-		hovered,
-		{
-			onPointerOver: (e) => (e.stopPropagation(), hover(true)),
-			onPointerOut: () => hover(false),
-		},
-	];
 }
 
 export function Duck(props) {

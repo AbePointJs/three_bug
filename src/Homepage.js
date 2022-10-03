@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Homepage = React.forwardRef((props, ref) => {
 	const { canvasView1, canvasView2 } = ref;
-
 	return (
 		<>
 			<h1>Homepage</h1>
